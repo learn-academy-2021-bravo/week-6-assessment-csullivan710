@@ -19,51 +19,51 @@
 // // a) Create a test with an expect statement using the variable provided.
  
 
-// // describe("nameJob", () => {
+// describe("nameJob", () => {
 
 
-//    test("returns an array with a sentence about each person with their names capitalized", () => {
+   test("returns an array with a sentence about each person with their names capitalized", () => {
 
 
-//     expect(nameJob()).toEqual(["Ford Prefect is a hitchhiker.", 
-//     "Zaphod Beeblebrox is a president of the galaxy.", 
-//     "Arthus Dent is a radio employee."])
-//   })
+    expect(nameJob()).toEqual(["Ford Prefect is a hitchhiker.", 
+    "Zaphod Beeblebrox is a president of the galaxy.", 
+    "Arthus Dent is a radio employee."])
+  })
 
 
-// // var people = [
-// //   { name: "ford prefect", occupation: "hitchhiker" },
-// //   { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
-// //   { name: "arthur dent", occupation: "radio employee" }
-// // ]
-// // // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is a president of the galaxy.", "Arthus Dent is a radio employee."]
+var people = [
+  { name: "ford prefect", occupation: "hitchhiker" },
+  { name: "zaphod beeblebrox", occupation: "president of the galaxy" },
+  { name: "arthur dent", occupation: "radio employee" }
+]
+// // Expected output: ["Ford Prefect is a hitchhiker.", "Zaphod Beeblebrox is a president of the galaxy.", "Arthus Dent is a radio employee."]
 
 
 
-// // // b) Create the function that makes the test pass.
+// // b) Create the function that makes the test pass.
 
-// // Declare a function named nameJob
-// // input array of objects
-// const nameJob = (arrOfObj) => {
-//   //initiate  variable as a place holder
-//   let newSentence = []
-// //iterate through array and capitilize the first character in the name
-//   arrOfObj.forEach((obj) => {
-//     let capName = obj.name
-// //turn names into an array with split
-//     .split(" ")
-//     .map((strName) => {
-// //grab letter at index 0 and capitalize
-//       return `${strName[0].toUpperCase()}${strName.slice(1)}`
-//     })
-// //join words
-//     .join(" ")
-// //push into empty array
-//     newSentence.push(`${capName} is a ${obj.occupation}.`)
-//   })
-// //output a sentence
-//   return newSentence
-// }
+// Declare a function named nameJob
+// input array of objects
+const nameJob = (arrOfObj) => {
+  //initiate  variable as a place holder
+  let newSentence = []
+//iterate through array and capitilize the first character in the name
+  arrOfObj.forEach((obj) => {
+    let capName = obj.name
+//turn names into an array with split
+    .split(" ")
+    .map((strName) => {
+//grab letter at index 0 and capitalize
+      return `${strName[0].toUpperCase()}${strName.slice(1)}`
+    })
+//join words
+    .join(" ")
+//push into empty array
+    newSentence.push(`${capName} is a ${obj.occupation}.`)
+  })
+//output a sentence
+  return newSentence
+}
 
 
 
@@ -78,30 +78,30 @@ var hodgepodge1 = [23, "Heyyyy!", 45, -10, 0, "Yo", false];
 var hodgepodge2 = [5, "Hola", 43, -34, "greetings", true];
 // Expected output: [ 2, 1, -1 ]
 
-// describe("num3", () => {
-//   test("should take in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.", () => {
-//     expect(num3(hodgepodge1)).toEqual([2, 0, -1, 0]);
-//     expect(num3(hodgepodge2)).toEqual([2, 1, -1]);
-//   });
-// });
+describe("num3", () => {
+  test("should take in a mixed data array and returns an array of only the REMAINDERS of the numbers when divided by 3.", () => {
+    expect(num3(hodgepodge1)).toEqual([2, 0, -1, 0]);
+    expect(num3(hodgepodge2)).toEqual([2, 1, -1]);
+  });
+});
 
-// // b) Create the function that makes the test pass.
+// b) Create the function that makes the test pass.
 
 //create function to take in array of mixed data
-// const num3 = (arr) => {
-//   return arr
-// loop through the array with map
-//     .map((elem) => {
-  // check the data type currently being looped through
-//       if (typeof elem === "number") {
-  // if it is a number do a % by 3 and only capture the result
-//         return elem % 3;
-//       }
-//     })
-// then filter out the non-number data types
-// return filtered array
-//     .filter((elem) => typeof elem === "number");
-// };
+const num3 = (arr) => {
+  return arr
+//oop through the array with map
+    .map((elem) => {
+  //check the data type currently being looped through
+      if (typeof elem === "number") {
+  //if it is a number do a % by 3 and only capture the result
+        return elem % 3;
+      }
+    })
+//then filter out the non-number data types
+//return filtered array
+    .filter((elem) => typeof elem === "number");
+};
 
 // // --------------------3) Create a function that takes in an array of numbers and returns the sum of all the numbers cubed.
 
